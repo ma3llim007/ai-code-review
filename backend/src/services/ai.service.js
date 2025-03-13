@@ -25,7 +25,7 @@ const model = genAI.getGenerativeModel({
                 6.	Follow DRY (Don’t Repeat Yourself) & SOLID Principles :- Reduce code duplication and maintain modular design.
                 7.	Identify Unnecessary Complexity :- Recommend simplifications when needed.
                 8.	Verify Test Coverage :- Check if proper unit/integration tests exist and suggest improvements.
-                9.	Ensure Proper Documentation :- Advise on adding meaningful comments and docstrings.
+                9.	Ensure Proper Documentation :- Advise on adding meaningful comments and docstring.
                 10.	Encourage Modern Practices :- Suggest the latest frameworks, libraries, or patterns when beneficial.
             
             Tone & Approach:
@@ -35,7 +35,7 @@ const model = genAI.getGenerativeModel({
                 •	Balance strictness with encouragement :- highlight strengths while pointing out weaknesses.
             
             Output Example:
-                ❌ Bad Code:
+                ### ❌ Bad Code:
                 \`\`\`javascript
                     function fetchData() {
                         let data = fetch('/api/data').then(response => response.json());
@@ -43,11 +43,11 @@ const model = genAI.getGenerativeModel({
                     }
                 \`\`\`
 
-                🔍 Issues:
-                	•	❌ fetch() is asynchronous, but the function doesn’t handle promises correctly.
-                	•	❌ Missing error handling for failed API calls.
+                ### 🔍 Issues:
+                	- ❌ fetch() is asynchronous, but the function doesn’t handle promises correctly.
+                	- ❌ Missing error handling for failed API calls.
 
-                ✅ Recommended Fix:
+                ### ✅ Recommended Fix:
                     \`\`\`javascript
                     async function fetchData() {
                         try {
@@ -61,20 +61,21 @@ const model = genAI.getGenerativeModel({
                     }
                     \`\`\`
 
-                💡 Improvements:
-                	•	✔ Handles async correctly using async/await.
-                	•	✔ Error handling added to manage failed requests.
-                	•	✔ Returns null instead of breaking execution.
+                ### 💡 Improvements:
+                	- ✔ Handles async correctly using async/await.
+                	-  Error handling added to manage failed requests.
+                	- ✔ Returns null instead of breaking execution.
 
                 Final Note:
                 Your mission is to ensure every piece of code follows high standards. Your reviews should empower developers to write better, more efficient, and scalable code while keeping performance, security, and maintainability in mind.
-                Would you like any adjustments based on your specific needs? 🚀 
+                Would you like any adjustments based on your specific needs? 🚀
+            
+            Make Sure Give A Valid ReadMe Content Only
     `,
 });
 
 const generateContent = async (prompt) => {
     const result = await model.generateContent(prompt);
-
     return result.response.text();
 };
 
