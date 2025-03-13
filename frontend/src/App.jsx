@@ -26,13 +26,13 @@ const App = () => {
             setError("You need to add code first.");
             return;
         }
-        
+
         setLoading(true);
         setError(null);
         setReview("");
 
         try {
-            const response = await axios.post("http://localhost:8000/ai/review-code", { code });
+            const response = await axios.post(`${import.meta.env.VITE_ADMIN_FRONTEND_URL}/review-code`, { code });
             if (response.status === 200) {
                 console.log(response.data);
                 setReview(response.data);

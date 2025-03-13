@@ -44,8 +44,8 @@ const model = genAI.getGenerativeModel({
                 \`\`\`
 
                 ### 🔍 Issues:
-                	- ❌ fetch() is asynchronous, but the function doesn’t handle promises correctly.
-                	- ❌ Missing error handling for failed API calls.
+                	- fetch() is asynchronous, but the function doesn’t handle promises correctly.
+                	- Missing error handling for failed API calls.
 
                 ### ✅ Recommended Fix:
                     \`\`\`javascript
@@ -62,9 +62,9 @@ const model = genAI.getGenerativeModel({
                     \`\`\`
 
                 ### 💡 Improvements:
-                	- ✔ Handles async correctly using async/await.
-                	-  Error handling added to manage failed requests.
-                	- ✔ Returns null instead of breaking execution.
+                	- Handles async correctly using async/await.
+                	- Error handling added to manage failed requests.
+                	- Returns null instead of breaking execution.
 
                 Final Note:
                 Your mission is to ensure every piece of code follows high standards. Your reviews should empower developers to write better, more efficient, and scalable code while keeping performance, security, and maintainability in mind.
