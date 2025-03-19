@@ -32,7 +32,7 @@ const App = () => {
         setReview("");
 
         try {
-            const response = await axios.post(`${import.meta.env.VITE_ADMIN_FRONTEND_URL}/review-code`, { code });
+            const response = await axios.post(`${import.meta.env.VITE_ADMIN_BACKEND_URL}/review-code`, { code });
             if (response.status === 200) {
                 console.log(response.data);
                 setReview(response.data);
